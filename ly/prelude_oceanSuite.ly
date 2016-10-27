@@ -1,5 +1,9 @@
 \version "2.18.2"
 
+\paper {
+        markup-system-spacing #'basic-distance = #20
+        system-system-spacing #'basic-distance = #18
+    }
 \header {
   title = "Ocean Suite: Prelude"
   composer = "Rob Drew"
