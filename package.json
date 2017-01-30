@@ -1,0 +1,14 @@
+{
+  "name": "lilypond",
+  "version": "0.1.0",
+  "description": "Auto-generate pdf for lilypond using the mikechernev/lilypond of DockerImage",
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "neske",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-shell": "^0.5.2"
+  }
+}
