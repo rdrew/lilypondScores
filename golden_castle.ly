@@ -2,7 +2,7 @@
 \version "2.18.2"
 \header {
   title = "The Golden Castle"
-  composer = "Robert Drew"
+  composer = "Rob Drew"
 }
 
 
