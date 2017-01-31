@@ -1,0 +1,6 @@
+#!/bin/bash
+# My first script
+
+rm *.pdf
+rm *.midi
+mv *.ly ly
