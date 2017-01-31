@@ -82,11 +82,11 @@ harmonies = \chordmode {
       \melody 
     }
     \new Lyrics \lyricsto "one" \text
-    \new TabStaff {
-      \override Stem #'transparent = ##t
-      \override Beam #'transparent = ##t
-      \melody
-    }
+    %\new TabStaff {
+      %\override Stem #'transparent = ##t
+      %\override Beam #'transparent = ##t
+      %\melody
+    %}
   >>
   \layout { }
   \midi { }
