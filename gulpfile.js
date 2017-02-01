@@ -1,15 +1,17 @@
 var gulp = require('gulp');
 var path = require('path');
 var shell = require('gulp-shell');
+var open = require('gulp-open');
 
 
 gulp.task('default', ['watch']);
 
 gulp.task('watch', function(){
-  gulp.watch('./**/*.ly', ['build']);
+  gulp.watch('./**/*.ly', ['openPdf']);
+  //gulp.watch('./**/*.pdf', ['openPdf']);
 });
 
-gulp.task('build', function () {
+gulp.task('buildPdf', function () {
    return gulp.src('*.ly', {read: false})
   .pipe(shell([
     'lilypond <%= f(file.path) %>',
@@ -21,4 +23,13 @@ gulp.task('build', function () {
       },
     }
   }))
-})
+});
+
+gulp.task('openPdf', ['buildPdf'], function(){
+  var options = {
+  //app: '/Applications/Google\ Chrome.app'
+  app: '/Applications/Preview.app'
+  };
+  gulp.src('./*.pdf')
+  .pipe(open(options));
+});
