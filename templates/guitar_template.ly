@@ -1,54 +1,84 @@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+% Score info
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+title = "Guitar Template"
+subtitle = "subtitle"
+scoredetails = {
+	\set staff.midiinstrument = "acoustic guitar (nylon)"
+	\time 6/8
+	\key a \dorian
+	\clef "treble_8"
+}
+
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+% treble voice
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+treblevoice = {
+
+	e''8 a, a b c d
+    e a e fis e d
+}
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+% bass voice
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+bassvoice = {
+
+	a2.
+	a2.
+}
+
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+% chords
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
 \version "2.16.1"
 
 \header{
 
-	title = "Guitar Template"
-	subtitle = "subtitle"
+	title = \title
+	subtitle = \subtitle
 	opus = "opus #"
 	composer = "composer name"
 	instrument= "instrument name"
 	date = "ca.1740-41"
-	style = "Baroque"
-	copyright = "Public Domain"
+	style = "baroque"
+	copyright = "public domain"
 
- footer = "Mutopia-2013/02/17-50"
+ footer = "mutopia-2013/02/17-50"
 
 }
+
 
 #(set-default-paper-size "letter")
 
 #(set-global-staff-size 18.8)
 
-Treble = {
-	\set Staff.midiInstrument = "acoustic guitar (nylon)"
-	\time 4/4
-	\key a \minor
-	\clef "treble_8"
-	\voiceOne
-	\slurDown
+treble = \relative c {
+	\scoredetails
+	\voiceone
+	\slurdown
 
-	a4 a a a
+	\treblevoice
 }
-Bass = {
-	\set Staff.midiInstrument = "acoustic guitar (nylon)"
-	\time 4/4
-	\key a \minor
-	\clef "treble_8"
-	\voiceTwo
+bass = {
+	\scoredetails
+	\voicetwo
 
-	a4 a a a
+	\bassvoice
 }
 
-GuitarStaff = \new Staff = GuitarStaff <<
-	\set Staff.midiInstrument = "acoustic guitar (nylon)"
+guitarstaff = \new staff = guitarstaff <<
+	\set staff.midiinstrument = "acoustic guitar (nylon)"
 
-	\transpose c' c \Treble
-	\transpose c' c \Bass
+	\transpose c' c \treble
+	\transpose c' c \bass
 >>
 
 \score {
 	<<
-		\GuitarStaff
+		\guitarstaff
 	>>
 	\layout {
 	}

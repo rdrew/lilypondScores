@@ -1,9 +1,44 @@
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+% Score info
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+title = "The Lisnagun"
+subtitle = "subtitle"
+scoreDetails = {
+	\set Staff.midiInstrument = "acoustic guitar (nylon)"
+	\time 6/8
+	\key a \dorian
+	\clef "treble_8"
+}
+
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+% Treble Voice
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+trebleVoice = {
+
+	e''8 a, a b c d
+    e a e fis e d
+}
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+% Bass Voice
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+bassVoice = {
+
+	a2.
+	a2.
+}
+
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+% Chords
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
 \version "2.16.1"
 
 \header{
 
-	title = "Guitar Template"
-	subtitle = "subtitle"
+	title = \title
+	subtitle = \subtitle
 	opus = "opus #"
 	composer = "composer name"
 	instrument= "instrument name"
@@ -15,28 +50,23 @@
 
 }
 
+
 #(set-default-paper-size "letter")
 
 #(set-global-staff-size 18.8)
 
-Treble = {
-	\set Staff.midiInstrument = "acoustic guitar (nylon)"
-	\time 4/4
-	\key a \minor
-	\clef "treble_8"
+Treble = \relative c {
+	\scoreDetails
 	\voiceOne
 	\slurDown
 
-	a4 a a a
+	\trebleVoice
 }
 Bass = {
-	\set Staff.midiInstrument = "acoustic guitar (nylon)"
-	\time 4/4
-	\key a \minor
-	\clef "treble_8"
+	\scoreDetails
 	\voiceTwo
 
-	a4 a a a
+	\bassVoice
 }
 
 GuitarStaff = \new Staff = GuitarStaff <<
