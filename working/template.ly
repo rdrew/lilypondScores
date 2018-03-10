@@ -2,10 +2,10 @@
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 % Score info
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-title = "The Farley Bridge"
+title = "Template"
 subtitle = ""
 instrumentName = "Guitar"
-composerName = "Duncan Chisolm"
+composerName = "Composer"
 opusNumber = "arranged by Rob Drew" 
 #(set-default-paper-size "letter")
 #(set-global-staff-size 18.8)
@@ -15,6 +15,8 @@ scoreDetails = {
   \key d \major
   \clef "treble_8"
 }
+
+%<a'-1>8 <d-3> d fise d e fis \bar "|"
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 % Treble Voice
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -24,39 +26,39 @@ trebleVoice = \relative c {
     %@@@@@@@@@@@@@@@@@@@
     %--> A Section
     %@@@@@@@@@@@@@@@@@@@
-    <a'-1>8 <d-3> d fis e d e fis \bar "|"
-    g fis fis4 d8 a8 a8 g8        \bar "|"
-    a8 d d a fis' fis  a,8 e' ~   \bar "|"
-    e d d fis g b, b a            \bar "|" \break
+    a'1 \bar "|"
+    a1 \bar "|"
+    a1 \bar "|"
+    a1 \bar "|" \break
     %=====================
-    fis d' d a d e e fis          \bar "|"
-    g fis fis4 d8 g, g a          \bar "|"
-    e' d b e  ~ e fis e d
+    a1 \bar "|"
+    a1 \bar "|"
+    a1 \bar "|"
   }
   \alternative {
     %--> 1st ending
-    {   b a   a2.  }
+    {   a1 \bar "|"  }
     %--> 2nd ending
-    {   b8 a a2 e'8 fis         \bar "|"  }
+    {   a1 \bar "|" \break }
   }
   \repeat volta 2 {
     %@@@@@@@@@@@@@@@@@@@
     %--> B Section
     %@@@@@@@@@@@@@@@@@@@
-    g8 fis fis d d d b g' ~     \bar "|"
-    g fis fis d d d a g         \bar "|"
-    a d d a fis' fis a, e'      \bar "|"
-    e d d e ~ e fis fis g       \bar "|"
-    %====================
-    g fis fis d d d b g' ~      \bar "|"
-    g fis fis d  d d b a        \bar "|"
-    e' d b e ~ e fis e d        \bar "|"
+    a1 \bar "|"
+    a1 \bar "|"
+    a1 \bar "|"
+    a1 \bar "|" \break
+    %=====================
+    a1 \bar "|"
+    a1 \bar "|"
+    a1 \bar "|"
   }
   \alternative {
     %--> 1st ending
-    {   b8 a a2 e'8 fis         \bar "|"  }
+    {   a1 \bar "|"  }
     %--> 2nd ending
-    {   b, a   a2.  }
+    {   a1 \bar "|"  }
   }
 }
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -68,39 +70,39 @@ bassVoice = {
     %@@@@@@@@@@@@@@@@@@@
     %--> A Section
     %@@@@@@@@@@@@@@@@@@@
-    <d'-0>2 a                       \bar "|"
-    g fis                           \bar "|"
-    d' b                            \bar "|"
-    a g                             \bar "|"
-    %==============
-    d'2 a                           \bar "|"
-    g fis                           \bar "|"
-    e fis4 g                        \bar "|"
+    a1 \bar "|"
+    a1 \bar "|"
+    a1 \bar "|"
+    a1 \bar "|" \break
+    %=====================
+    a1 \bar "|"
+    a1 \bar "|"
+    a1 \bar "|"
   }
   \alternative {
     %--> 1st ending
-    { a1 }
+    {   a1 \bar "|"  }
     %--> 2nd ending
-    { a1 }
+    {   a1 \bar "|"  }
   }
   \repeat volta 2 {
     %@@@@@@@@@@@@@@@@@@@
     %--> B Section
     %@@@@@@@@@@@@@@@@@@@
-    e1                    \bar "|"
-    g1                    \bar "|"
-    d'2 b                 \bar "|"
-    a a                   \bar "|"
-    %====================
-    e1                    \bar "|"
-    g1                    \bar "|"
-    e2 fis4 g4            \bar "|"
+    a1 \bar "|"
+    a1 \bar "|"
+    a1 \bar "|"
+    a1 \bar "|" \break
+    %=====================
+    a1 \bar "|"
+    a1 \bar "|"
+    a1 \bar "|"
   }
   \alternative {
     %--> 1st ending
-    { a2 a }
+    {   a1 \bar "|"  }
     %--> 2nd ending
-    { a2 a }
+    {   a1 \bar "|"  }
   }
 }
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
