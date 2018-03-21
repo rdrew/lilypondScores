@@ -11,5 +11,9 @@
     "gulp": "^3.9.1",
     "gulp-open": "^2.0.0",
     "gulp-shell": "^0.5.2"
+  },
+  "dependencies": {
+    "browser-sync": "^2.23.6",
+    "yargs": "^11.0.0"
   }
 }
