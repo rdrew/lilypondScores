@@ -9,7 +9,7 @@
 \paper {
 
   markup-system-spacing #'basic-distance = #20
-  system-system-spacing #'basic-distance = #18
+  system-system-spacing #'basic-distance = #10
 }
 
 melody = \relative c {
