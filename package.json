@@ -8,7 +8,7 @@
   "author": "neske",
   "license": "MIT",
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-open": "^2.0.0",
     "gulp-shell": "^0.5.2"
   },
